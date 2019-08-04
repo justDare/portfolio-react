@@ -1,0 +1,141 @@
+#timeline .timeline-item:after, #timeline .timeline-item:before {
+    content: '';
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+}
+
+#timeline {
+width: 100%;
+margin: 30px auto;
+position: relative;
+-webkit-transition: all 0.4s ease;
+transition: all 0.4s ease;
+}
+
+#timeline:before {
+content: "";
+width: 3px;
+height: 100%;
+background: #ccc;
+left: 50%;
+top: 0;
+position: absolute;
+}
+
+#timeline:after {
+content: "";
+clear: both;
+display: table;
+width: 100%;
+}
+
+#timeline .timeline-item {
+margin-bottom: 50px;
+position: relative;
+}
+
+#timeline .timeline-item .fullstack {
+background: blue;
+}
+
+#timeline .timeline-item .school {
+background: green;
+}
+
+#timeline .timeline-item .freelance {
+background: red;
+}
+
+#timeline .timeline-item .timeline-icon {
+width: 50px;
+height: 50px;
+position: absolute;
+top: 0;
+left: 50%;
+overflow: hidden;
+margin-left: -23px;
+text-align: center;
+border-radius: 50%;
+}
+
+#timeline .timeline-item .timeline-icon i {
+font-size: 25px;
+margin-top: 11px;
+color: white;
+}
+
+#timeline .timeline-item .timeline-content {
+width: 45%;
+border: 1.5px solid black;
+padding: 20px;
+-webkit-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+-ms-box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+box-shadow: 0 3px 0 rgba(0, 0, 0, 0.1);
+border-radius: 5px;
+-webkit-transition: all 0.3s ease;
+transition: all 0.3s ease;
+}
+
+#timeline .timeline-item .timeline-content span {
+padding-left: 1rem;
+font-size: 1rem;
+color: #949494;
+font-weight: 600;
+}
+
+#timeline .timeline-item .timeline-content:before {
+content: '';
+position: absolute;
+left: 45%;
+top: 20px;
+width: 0;
+height: 0;
+border-top: 7px solid transparent;
+border-bottom: 7px solid transparent;
+border-left: 7px solid white;
+}
+
+#timeline .timeline-item .timeline-content.right {
+float: right;
+}
+
+#timeline .timeline-item .timeline-content.right:before {
+content: '';
+right: 45%;
+left: inherit;
+border-left: 0;
+border-right: 7px solid white;
+}
+
+@media screen and (max-width: 768px) {
+#timeline {
+    margin: 30px;
+    padding: 0px;
+    width: 90%;
+}
+#timeline:before {
+    left: 0;
+}
+#timeline .timeline-item .timeline-content {
+    width: 90%;
+    float: right;
+}
+#timeline .timeline-item .timeline-content:before, #timeline .timeline-item .timeline-content.right:before {
+    left: 10%;
+    margin-left: -6px;
+    border-left: 0;
+    border-right: 7px solid black;
+}
+#timeline .timeline-item .timeline-icon {
+    left: 0;
+}
+}
