@@ -41,7 +41,7 @@ const TimeLine = () => {
         <div className="container">
             <div id="experience">
                 <div className="content">
-                    <h2 className="project-name" data-aos="fade-down-right" data-aos-duration="500">experience</h2>
+                    <h2 className="project-name" data-aos="fade-down-right" data-aos-duration="500">Experience</h2>
                     <div id="timeline">
                         {renderedList}
                     </div>

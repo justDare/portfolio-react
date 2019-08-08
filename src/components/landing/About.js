@@ -6,9 +6,9 @@ const About = () => {
         <div id="about" className="container">
             <div className="content">
                 <div className="row">
+                    <h2 data-aos="fade-right" data-aos-duration="1000">About</h2>
                     <button>
                         <span>
-                            <h2 data-aos="fade-right" data-aos-duration="1000">About</h2>
                             <p data-aos="fade-right" data-aos-duration="500" data-aos-delay="500">
                                 Hi I’m Darian Sampare. I’m a web developer… or I’m a software engineer… or errr my degree says I’m a computer scientist…
                                 hmm I guess all you need to know is that I love to use my laptop to make cool things for people,

@@ -5,6 +5,8 @@ import Navbar from './common/Navbar';
 import About from './landing/About';
 import TimeLine from './landing/experience/TimeLine';
 import LanguagesDisplay from './landing/experience/LanguagesDisplay';
+import Portfolio from './landing/portfolio/Portfolio';
+import Footer from './common/Footer';
 
 const App = () => {
     return (
@@ -14,6 +16,8 @@ const App = () => {
             <About />
             <TimeLine />
             <LanguagesDisplay />
+            <Portfolio />
+            <Footer />
         </div>
     );
 }
