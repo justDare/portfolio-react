@@ -6,6 +6,7 @@ import About from './landing/About';
 import TimeLine from './landing/experience/TimeLine';
 import LanguagesDisplay from './landing/experience/LanguagesDisplay';
 import Portfolio from './landing/portfolio/Portfolio';
+import Contact from './landing/Contact';
 import Footer from './common/Footer';
 
 const App = () => {
@@ -17,6 +18,7 @@ const App = () => {
             <TimeLine />
             <LanguagesDisplay />
             <Portfolio />
+            <Contact />
             <Footer />
         </div>
     );

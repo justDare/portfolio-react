@@ -1,7 +1,6 @@
 import React from 'react';
 import Project from './Project';
 import './Portfolio.scss';
-import simpleParallax from 'simple-parallax-js';
 
 class Portfolio extends React.Component {
     constructor(props) {
@@ -17,30 +16,29 @@ class Portfolio extends React.Component {
             {
                 name: 'DareToProgram',
                 url: 'https://www.daretoprogram.ca/',
-                imgSrc: '../../../assets/landing/portfolio/daretoprogram.png',
                 summary: 'My personal blog built with Django. Test it out yourself by signing up and interacting with the posts!',
-                category: 'Python'
+                category: 'Python',
+                class: 'daretoprogram'
             },
             {
-                name: 'DareToProgram',
-                url: 'https://www.daretoprogram.ca/',
-                imgSrc: '../../../assets/landing/portfolio/daretoprogram.png',
-                summary: 'My personal blog built with Django. Test it out yourself by signing up and interacting with the posts!',
-                category: 'Python'
+                name: 'Animikii Social Impact Report',
+                url: 'http://2018.animikii.com/',
+                summary: 'The 2018 Animikii impact report, built with JS, SCSS, and Yarn.',
+                category: 'JavaScript / SCSS',
+                class: 'impact'
             },
             {
-                name: 'DareToProgram',
-                url: 'https://www.daretoprogram.ca/',
-                imgSrc: '../../../assets/landing/portfolio/daretoprogram.png',
-                summary: 'My personal blog built with Django. Test it out yourself by signing up and interacting with the posts!',
-                category: 'Python'
+                name: 'Gathering Our Voices',
+                url: 'https://gatheringourvoices.ca/',
+                summary: 'This site was built on WordPress at request of the customer. GOV is currently being maintained by UrsaSol. ',
+                category: 'CMS',
+                class: 'gov'
             }
         ]
     }
 
     componentDidMount() {
-        var images = document.querySelectorAll('.gallery-item');
-        new simpleParallax(images);
+
     }
 
     getLists() {

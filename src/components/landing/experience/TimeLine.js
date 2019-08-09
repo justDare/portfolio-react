@@ -24,6 +24,13 @@ const TimeLine = () => {
             icon: 'fas fa-code',
             indicator: 'fullstack',
             info: 'In the spring of 2018 I began my position at UrsaSol designs, a local web development startup as a Fullstack Developer and UI/UX designer. This position required everyone on the team to take on many roles and adapt quickly. Outside of technological experience, I was able to broaden my horizons to client interactions and project management.'
+        },
+        {
+            place: 'Web Developer at Animikii',
+            dates: '2019',
+            icon: 'fas fa-code',
+            indicator: 'fullstack',
+            info: 'In the summer of 2019 I took on a four month co-op at Animikii Indigenous Technology as a Web Devloper. Here I strengthened my technical skills working within a team of senior software developers and was blessed with the opportunity to give back to the Indigenous Community.'
         }
     ];
 

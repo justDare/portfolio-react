@@ -3,7 +3,8 @@ import React from 'react';
 const Project = (props) => {
     return (
         <div className="project col-lg-6 col-sm-12">
-            <div className={"hovereffect " + props.project.name} data-aos="fade-up" data-aos-duration="1000">
+            <div className={"hovereffect " + props.project.class} data-aos="fade-up" data-aos-duration="1000">
+                <div className="bg"></div>
                 <div className="overlay">
                     <h4>{props.project.name}</h4>
                     <p>

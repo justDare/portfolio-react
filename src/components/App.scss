@@ -14,3 +14,27 @@ h1, h2 {
 .noScroll {
     overflow: hidden;
 }
+
+.bttn {
+    width: 150px;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-top: 1rem;
+    margin: auto;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    background-color: transparent;
+}
+
+.bttn:hover {
+    width: 200px;
+    color: white;
+    background-color: black;
+}
+
+.button__expand {
+    webkit-transition: 0.5s !important;
+    -webkit-transition: 0.5s !important;
+    transition: 0.5s !important;
+}
