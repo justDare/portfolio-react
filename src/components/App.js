@@ -9,19 +9,23 @@ import Portfolio from './landing/portfolio/Portfolio';
 import Contact from './landing/Contact';
 import Footer from './common/Footer';
 
-const App = () => {
-    return (
-        <div id="main">
-            <Navbar />
-            <Header />
-            <About />
-            <TimeLine />
-            <LanguagesDisplay />
-            <Portfolio />
-            <Contact />
-            <Footer />
-        </div>
-    );
+class App extends React.Component {
+
+    render() {
+        return (
+            <div id="main">
+                <Navbar />
+                <Header />
+                <About />
+                <TimeLine />
+                <LanguagesDisplay />
+                <Portfolio />
+                <Contact />
+                <Footer />
+            </div>
+        );
+    }
+
 }
 
 export default App;

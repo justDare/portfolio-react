@@ -97,16 +97,13 @@ class LanguagesDisplay extends React.Component {
 
     render() {
         return (
-            <div className="container">
-                <div id="languages">
-                    <div className="content">
-                        <h2 data-aos="fade-right" data-aos-duration="1000">Languages Spoken</h2>
-                        <div className="row">
-                            {this.getLists()}
-                        </div>
+            <div id="languages" className="container">
+                <div className="content">
+                    <h2 data-aos="fade-right" data-aos-duration="1000">Languages Spoken</h2>
+                    <div className="row">
+                        {this.getLists()}
                     </div>
                 </div>
-
             </div>
         );
     }
