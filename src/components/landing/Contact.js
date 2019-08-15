@@ -3,7 +3,7 @@ import './Contact.scss';
 
 const Contact = () => {
     return (
-        <div className="container">
+        <div id="contact" className="container">
             <form className="contact2-form validate-form" action="https://formspree.io/dsampare04@gmail.com" method="POST">
                 <h2 className="text-center">contact</h2>
                 <div className="wrap-input2 validate-input" data-validate="Name is required">

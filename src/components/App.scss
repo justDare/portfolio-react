@@ -12,6 +12,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 3rem;
+
+    @media only screen and(max-width: 576px) {
+        font-size: 2.3rem;
+    }
 }
 
 h1, h2 {
@@ -19,13 +23,21 @@ h1, h2 {
 
 
     &.rev-block {
-        top: -12rem;
+        top: 3rem;
         padding: 0.4em 1em;
+
+        @media only screen and(max-width: 576px) {
+            padding: 5px;
+        }
     }
 
     &.rev-second {
         left: 40px;
-        top: -9rem;
+        top: 7rem;
+
+        @media only screen and(max-width: 576px) {
+            left: 10px;
+        }
 
         span {
             animation-delay: 2s;
@@ -40,7 +52,9 @@ h1, h2 {
 
 .content {
     position: relative;
-    margin: 14rem 0;;
+    padding: 18rem 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .noScroll {
@@ -69,6 +83,13 @@ h1, h2 {
     webkit-transition: 0.5s !important;
     -webkit-transition: 0.5s !important;
     transition: 0.5s !important;
+}
+
+.block-text {
+    font-family: quicksand, Arial, sans-serif;
+    font-weight: 400;
+    padding: 45px !important;
+    line-height: 1.8em;
 }
 
 // black fade in

@@ -1,18 +1,58 @@
 import React from 'react';
 import './NavOverlay.scss';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 class NavOverlay extends React.Component {
+
+
     render() {
+        const { active, onMenuToggle } = this.props;
+
         return (
-            <div className={this.props.active}>
+            <div className={active}>
                 <div className={"nav"}>
                     <div className="nav__content">
                         <ul className="nav__list">
-                            <li className="nav__list-item"><a id="homelink" className="hover-target">home</a></li>
-                            <li className="nav__list-item"><a id="aboutlink" className="hover-target">about</a></li>
-                            <li className="nav__list-item"><a id="skillslink" className="hover-target">skills</a></li>
-                            <li className="nav__list-item"><a id="portfoliolink" className="hover-target">portfolio</a></li>
-                            <li className="nav__list-item"><a id="contactlink" className="hover-target">contact</a></li>
+                            <li className="nav__list-item">
+                                <Link
+                                    onClick={onMenuToggle} className="hover-target" to="banner"
+                                    spy={true} smooth={true} offset={0} duration={700}
+                                >
+                                    Home
+                                </Link>
+                            </li>
+                            <li className="nav__list-item">
+                                <Link
+                                    onClick={onMenuToggle} className="hover-target" to="about"
+                                    spy={true} smooth={true} offset={-40} duration={700}
+                                >
+                                    About
+                                </Link>
+                            </li>
+                            <li className="nav__list-item">
+                                <Link
+                                    onClick={onMenuToggle} className="hover-target" to="experience"
+                                    spy={true} smooth={true} offset={-40} duration={700}
+                                >
+                                    Experience
+                                </Link>
+                            </li>
+                            <li className="nav__list-item">
+                                <Link
+                                    onClick={onMenuToggle} className="hover-target" to="portfolio"
+                                    spy={true} smooth={true} offset={-40} duration={700}
+                                >
+                                    Portfolio
+                                </Link>
+                            </li>
+                            <li className="nav__list-item">
+                                <Link
+                                    onClick={onMenuToggle} className="hover-target" to="contact"
+                                    spy={true} smooth={true} offset={-40} duration={700}
+                                >
+                                    Contact
+                                </Link>
+                            </li>
                         </ul>
                     </div>
                 </div>

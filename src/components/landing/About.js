@@ -6,15 +6,31 @@ import aboutImg from '../../assets/landing/portfolio/daretoprogram.png';
 setDefaultProps({
     bounce: false,
     visibleClassName: 'visible',
-    percent: 20
+    percent: 10
 });
 
 class About extends React.Component {
-
-    state = { visible: false };
+    constructor(props) {
+        super(props);
+        this.blockCol = React.createRef();
+        this.state = { visible: false, blockHeight: 'auto' };
+    }
 
     addKeyframe = () => {
         this.state.visible ? this.setState({ visible: false }) : this.setState({ visible: true });
+    }
+
+    componentDidMount = () => {
+        this.resize();
+        window.addEventListener('resize', this.resize);
+    }
+
+    resize = () => {
+        if (window.innerWidth < 768) {
+            let height = this.refs.blockCol.offsetHeight;
+            this.setState({ blockHeight: height });
+        }
+        console.log(this.state.blockHeight);
     }
 
     render() {
@@ -28,7 +44,7 @@ class About extends React.Component {
         return (
             <OnVisible onChange={this.addKeyframe} id="about">
                 <div className="content">
-                    <div className="container">
+                    <div>
                         <h1 className={rev}>
                             <span>About</span>
                         </h1>
@@ -37,10 +53,9 @@ class About extends React.Component {
                         </h1>
                     </div>
                     <div className="row">
-                        <div className="col-6 about-text">
-                            <div className={revFull}>
+                        <div className="col-sm-12 col-md-6 about-text" style={{ height: this.state.blockHeight }}>
+                            <div className={"block-text " + revFull} ref="blockCol">
                                 <span>
-                                  
                                         Hi I’m Darian Sampare. I’m a web developer… or I’m a software engineer… or errr my degree says I’m a computer scientist…
                                         hmm I guess all you need to know is that I love to use my laptop to make cool things for people,
                                         and I want you to enjoy what I make as much as I enjoy the process.
@@ -57,7 +72,7 @@ class About extends React.Component {
                             </div>
 
                         </div>
-                        <div className="col-6 about-img">
+                        <div className="col-sm-12 col-md-6  about-img" style={{ height: this.state.blockHeight }}>
                             <div className={rev}><span>
                                 <img src={aboutImg} />
                             </span></div>

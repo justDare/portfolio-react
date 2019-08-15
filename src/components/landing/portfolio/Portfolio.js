@@ -1,10 +1,18 @@
 import React from 'react';
 import Project from './Project';
 import './Portfolio.scss';
+import OnVisible, { setDefaultProps } from 'react-on-visible';
+
+setDefaultProps({
+    bounce: false,
+    visibleClassName: 'visible',
+    percent: 10
+});
 
 class Portfolio extends React.Component {
     constructor(props) {
         super(props);
+        this.state = { visible: false };
         this.categories = [
             'HTML+CSS',
             'React',
@@ -37,8 +45,8 @@ class Portfolio extends React.Component {
         ]
     }
 
-    componentDidMount() {
-
+    addKeyframe = () => {
+        this.state.visible ? this.setState({ visible: false }) : this.setState({ visible: true });
     }
 
     getLists() {
@@ -50,14 +58,23 @@ class Portfolio extends React.Component {
     }
 
     render() {
+        let rev;
+        if (this.state.visible)
+            rev = 'rev-block';
 
         return (
-            <div className="container" id="portfolio">
-                <h2>Portfolio</h2>
-                <div className="portfolioContainer row">
-                    {this.getLists()}
+            <OnVisible id="portfolio" onChange={this.addKeyframe}
+            >
+                <div className="content">
+                    <h1 className={rev}><span>Portfolio</span></h1>
+                    <h1 className={"rev-second " + rev}>
+                        <span>- My Recent Works -</span>
+                    </h1>
+                    <div className="portfolioContainer row container mx-auto">
+                        {this.getLists()}
+                    </div>
                 </div>
-            </div>
+            </OnVisible>
         );
     }
 }

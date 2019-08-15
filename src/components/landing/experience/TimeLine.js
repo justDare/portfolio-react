@@ -43,6 +43,7 @@ class TimeLine extends React.Component {
                 info: 'In the summer of 2019 I took on a four month co-op at Animikii Indigenous Technology as a Web Devloper. Here I strengthened my technical skills working within a team of senior software developers and was blessed with the opportunity to give back to the Indigenous Community.'
             }
         ];
+
         this.renderedList = this.experiences.map((experience, index) => {
             let position;
             if ((index + 1) % 2 === 0)
@@ -65,14 +66,14 @@ class TimeLine extends React.Component {
             rev = 'rev-block';
 
         return (
-            <OnVisible className="container" id="experience" onChange={this.addKeyframe}>
-                <div>
-                    <div className="content">
-                        <div></div>
-                        <h2 className={"project-name " + rev}><span>Experience</span></h2>
-                        <div id="timeline">
-                            {this.renderedList}
-                        </div>
+            <OnVisible id="experience" onChange={this.addKeyframe}>
+                <div className="content">
+                    <h1 className={rev}><span>Experience</span></h1>
+                    <h1 className={"rev-second " + rev}>
+                        <span>- Get To Know Your Developer -</span>
+                    </h1>
+                    <div id="timeline" className="container mx-auto">
+                        {this.renderedList}
                     </div>
                 </div>
             </OnVisible>

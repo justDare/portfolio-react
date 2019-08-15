@@ -1,11 +1,18 @@
 import React from 'react';
 import Language from './Language';
 import ProgressBar from 'progressbar.js';
+import OnVisible, { setDefaultProps } from 'react-on-visible';
+
+setDefaultProps({
+    bounce: false,
+    visibleClassName: 'visible',
+    percent: 20
+});
 
 class LanguagesDisplay extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { loaded: false };
+        this.state = { loaded: false, visible: false };
         this.languages = [
             { language: 'JavaScript', skill: 85 },
             { language: 'CSS/SCSS', skill: 90 },
@@ -48,8 +55,8 @@ class LanguagesDisplay extends React.Component {
                 },
                 // Set default step function for all animate calls
                 step: function (state, circle) {
-                    circle.path.setAttribute('stroke', '#702fa8');
-                    circle.path.setAttribute('stroke-width', 4);
+                    circle.path.setAttribute('stroke', '#9a8ac3');
+                    circle.path.setAttribute('stroke-width', 3);
 
                     var value = Math.round(circle.value() * 100);
                     if (value === 0) {
@@ -59,8 +66,8 @@ class LanguagesDisplay extends React.Component {
                     }
                 }
             });
-            bar.text.style.fontFamily = '"Raleway", Helvetica, sans-serif';
-            bar.text.style.fontSize = '2rem';
+
+            bar.text.style.fontSize = '1.5rem';
 
             var percentage = percentages[i] * .01;
             bar.animate(percentage); // Number from 0.0 to 1.0
@@ -95,16 +102,29 @@ class LanguagesDisplay extends React.Component {
         return renderedList;
     }
 
+    addKeyframe = () => {
+        this.state.visible ? this.setState({ visible: false }) : this.setState({ visible: true });
+    }
+
     render() {
+        let rev;
+        if (this.state.visible)
+            rev = 'rev-block';
+
         return (
-            <div id="languages" className="container">
+            <OnVisible id="languages" onChange={this.addKeyframe}>
                 <div className="content">
-                    <h2 data-aos="fade-right" data-aos-duration="1000">Languages Spoken</h2>
-                    <div className="row">
+                    <h1 className={rev}>
+                        <span>Languages</span>
+                    </h1>
+                    <h1 className={"rev-second " + rev}>
+                        <span>- Get To Know Your Developer -</span>
+                    </h1>
+                    <div className="row container mx-auto">
                         {this.getLists()}
                     </div>
                 </div>
-            </div>
+            </OnVisible>
         );
     }
 }

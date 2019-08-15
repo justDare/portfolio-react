@@ -4,10 +4,30 @@ import './Navbar.scss';
 import NavOverlay from './NavOverlay';
 
 class Navbar extends React.Component {
-    state = { menuOpen: false };
+    state = { menuOpen: false, color: 'transparent' };
+
+    listenScrollEvent = (event) => {
+        if (window.scrollY > 100) {
+            this.setState({ color: '#7e71a0f0' });
+        } else {
+            this.setState({ color: 'transparent' });
+        }
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.listenScrollEvent)
+    }
 
     OnMenuToggle = (event) => {
-        this.state.menuOpen ? this.setState({ menuOpen: false }) : this.setState({ menuOpen: true });
+        // this.state.menuOpen ? this.setState({ menuOpen: false }) : this.setState({ menuOpen: true });
+        if (this.state.menuOpen) {
+            this.setState({ menuOpen: false });
+
+        } else {
+            this.setState({ menuOpen: true });
+            this.setState({ color: '#9a8ac3' });
+        }
+        console.log(this.state.menuOpen);
     }
 
     render() {
@@ -20,7 +40,7 @@ class Navbar extends React.Component {
 
         return (
             <div>
-                <div className="topBar">
+                <div className="topBar" style={{ backgroundColor: this.state.color }}>
                     <div className="topBarHolder">
                         <div id="logo">
                             <a href="https://dariansampare.ca">
@@ -38,7 +58,7 @@ class Navbar extends React.Component {
                     </div>
                 </div>
 
-                <NavOverlay active={active} />
+                <NavOverlay onMenuToggle={this.OnMenuToggle} active={active} />
 
             </div>
         )
