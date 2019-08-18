@@ -39,7 +39,8 @@
 
         span {
 
-            &:before, &:after {
+            &:before,
+            &:after {
                 display: block;
                 content: "";
                 width: 20px;
@@ -47,11 +48,7 @@
                 position: absolute;
             }
         }
-        
-    }
-    @media screen and (max-width: 767px) {
-        padding-top: 72px;
-        padding-bottom: 72px;
+
     }
 }
 

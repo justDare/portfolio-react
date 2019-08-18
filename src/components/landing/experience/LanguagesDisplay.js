@@ -1,7 +1,9 @@
 import React from 'react';
 import Language from './Language';
 import ProgressBar from 'progressbar.js';
-import OnVisible, { setDefaultProps } from 'react-on-visible';
+import OnVisible, {
+    setDefaultProps
+} from 'react-on-visible';
 
 setDefaultProps({
     bounce: false,
@@ -12,15 +14,38 @@ setDefaultProps({
 class LanguagesDisplay extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { loaded: false, visible: false };
-        this.languages = [
-            { language: 'JavaScript', skill: 85 },
-            { language: 'CSS/SCSS', skill: 90 },
-            { language: 'HTML', skill: 95 },
-            { language: 'Java', skill: 75 },
-            { language: 'Django', skill: 60 },
-            { language: 'React', skill: 60 },
-            { language: 'Python', skill: 70 }
+        this.state = {
+            loaded: false,
+            visible: false
+        };
+        this.languages = [{
+                language: 'JavaScript',
+                skill: 85
+            },
+            {
+                language: 'CSS/SCSS',
+                skill: 90
+            },
+            {
+                language: 'HTML',
+                skill: 95
+            },
+            {
+                language: 'Java',
+                skill: 75
+            },
+            {
+                language: 'Django',
+                skill: 60
+            },
+            {
+                language: 'React',
+                skill: 60
+            },
+            {
+                language: 'Python',
+                skill: 70
+            }
         ];
     }
 
@@ -84,26 +109,38 @@ class LanguagesDisplay extends React.Component {
 
     onWindowScroll = () => {
         if (!this.state.loaded) {
-            var el = document.querySelector('#languages');
+            var el = document.querySelector('#languages .container');
             var position = el.getBoundingClientRect();
             // checking for partial visibility
             if (position.top < window.innerHeight && position.bottom >= 0) {
                 this.activateSkillBars();
-                this.setState({ loaded: true });
+                this.setState({
+                    loaded: true
+                });
             }
         }
     }
 
     getLists() {
         const renderedList = this.languages.map((language, index) => {
-            return <Language key={index} language={language} />;
+            return <Language key = {
+                index
+            }
+            language = {
+                language
+            }
+            />;
         });
 
         return renderedList;
     }
 
     addKeyframe = () => {
-        this.state.visible ? this.setState({ visible: false }) : this.setState({ visible: true });
+        this.state.visible ? this.setState({
+            visible: false
+        }) : this.setState({
+            visible: true
+        });
     }
 
     render() {
@@ -111,20 +148,32 @@ class LanguagesDisplay extends React.Component {
         if (this.state.visible)
             rev = 'rev-block';
 
-        return (
-            <OnVisible id="languages" onChange={this.addKeyframe}>
-                <div className="content">
-                    <h1 className={rev}>
-                        <span>Languages</span>
-                    </h1>
-                    <h1 className={"rev-second " + rev}>
-                        <span>- Get To Know Your Developer -</span>
-                    </h1>
-                    <div className="row container mx-auto">
-                        {this.getLists()}
-                    </div>
-                </div>
-            </OnVisible>
+        return ( <
+            OnVisible id = "languages"
+            onChange = {
+                this.addKeyframe
+            } >
+            <
+            div className = "content" >
+            <
+            h1 className = {
+                rev
+            } >
+            <
+            span > Languages < /span> <
+            /h1> <
+            h1 className = {
+                "rev-second " + rev
+            } >
+            <
+            span > -Get To Know Your Developer - < /span> <
+            /h1> <
+            div className = "row container mx-auto" > {
+                this.getLists()
+            } <
+            /div> <
+            /div> <
+            /OnVisible>
         );
     }
 }

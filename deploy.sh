@@ -12,5 +12,5 @@ git commit -am "$commitMessage"
 # push to git remote repository
 git push
 ###########################
-echo Press Enter to Push Changes...
+echo Press Enter...
 read

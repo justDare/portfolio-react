@@ -1,7 +1,7 @@
 import React from 'react';
 import OnVisible, { setDefaultProps } from 'react-on-visible';
 import './About.scss';
-import aboutImg from '../../assets/landing/portfolio/daretoprogram.png';
+import aboutImg from '../../assets/landing/dare_prof.jpg';
 
 setDefaultProps({
     bounce: false,
@@ -72,13 +72,12 @@ class About extends React.Component {
                             </div>
 
                         </div>
-                        <div className="col-sm-12 col-md-6  about-img" style={{ height: this.state.blockHeight }}>
+                        <div className="col-sm-12 col-md-6 about-img" style={{ height: this.state.blockHeight }}>
                             <div className={rev}><span>
                                 <img src={aboutImg} />
                             </span></div>
                         </div>
                     </div>
-
                 </div>
             </OnVisible>
         );

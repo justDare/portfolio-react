@@ -5,7 +5,12 @@ body {
     background-color: #f7f7f7;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
 }
@@ -18,7 +23,8 @@ h1 {
     }
 }
 
-h1, h2 {
+h1,
+h2 {
     font-weight: 600 !important;
 
 
@@ -55,6 +61,11 @@ h1, h2 {
     padding: 18rem 0;
     overflow-x: hidden;
     overflow-y: hidden;
+
+    @media only screen and(max-width: 576px) {
+        padding-top: 16rem;
+        padding-bottom: 0rem;
+    }
 }
 
 .noScroll {
@@ -63,7 +74,7 @@ h1, h2 {
 
 .bttn {
     width: 150px;
-    border: 1px solid black;
+    border: 1px solid #9a8ac3;
     border-radius: 50px;
     margin-top: 1rem;
     margin: auto;
@@ -76,7 +87,7 @@ h1, h2 {
 .bttn:hover {
     width: 200px;
     color: white;
-    background-color: black;
+    background-color: #9a8ac3;
 }
 
 .button__expand {
@@ -88,7 +99,7 @@ h1, h2 {
 .block-text {
     font-family: quicksand, Arial, sans-serif;
     font-weight: 400;
-    padding: 45px !important;
+    padding: 25px !important;
     line-height: 1.8em;
 }
 
@@ -98,7 +109,7 @@ h1, h2 {
 
     span {
         opacity: 0;
-        animation: appear-text 0.0001s  linear forwards;
+        animation: appear-text 0.0001s linear forwards;
         animation-delay: 1.4s;
     }
 
@@ -110,7 +121,7 @@ h1, h2 {
         width: 0%;
         height: 100%;
         background: rgb(127, 64, 241);
-        animation: rev-block-anim 1.5s cubic-bezier(0.19, 1 , 0.22, 1) forwards;
+        animation: rev-block-anim 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 1s;
     }
 }
@@ -120,9 +131,9 @@ h1, h2 {
 
     span {
         opacity: 0;
-        animation: appear-text 0.0001s  linear forwards;
+        animation: appear-text 0.0001s linear forwards;
         animation-delay: 1.4s;
-        
+
     }
 
     &:after {
@@ -133,7 +144,7 @@ h1, h2 {
         width: 0%;
         height: 100%;
         background: white;
-        animation: rev-block-full 1.5s cubic-bezier(0.19, 1 , 0.22, 1) forwards;
+        animation: rev-block-full 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
         animation-delay: 1s;
         z-index: -1;
     }
@@ -144,10 +155,12 @@ h1, h2 {
         left: 0;
         width: 0%;
     }
+
     50% {
         left: 0;
         width: 100%
     }
+
     100% {
         width: 0%;
         left: 100%;
@@ -159,10 +172,12 @@ h1, h2 {
         left: 0;
         width: 0%;
     }
+
     50% {
         left: 0;
         width: 100%
     }
+
     100% {
         width: 100%;
         left: 0%;
@@ -173,9 +188,8 @@ h1, h2 {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
 }
-
-
