@@ -115,13 +115,13 @@
 #timeline .timeline-item .timeline-content:before {
     content: '';
     position: absolute;
-    left: 45%;
-    top: 20px;
+    left: 100%;
+    top: 15px;
     width: 0;
     height: 0;
-    border-top: 7px solid transparent;
-    border-bottom: 7px solid transparent;
-    border-left: 7px solid white;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid #9a8ac3;
 }
 
 #timeline .timeline-item .timeline-content.right {
@@ -130,10 +130,9 @@
 
 #timeline .timeline-item .timeline-content.right:before {
     content: '';
-    right: 45%;
-    left: inherit;
+    left: -10px;
     border-left: 0;
-    border-right: 7px solid white;
+    border-right: 10px solid #9a8ac3;
 }
 
 @media screen and (max-width: 768px) {
@@ -154,13 +153,21 @@
 
     #timeline .timeline-item .timeline-content:before,
     #timeline .timeline-item .timeline-content.right:before {
-        left: 10%;
-        margin-left: -6px;
+        left: -10px;
         border-left: 0;
-        border-right: 7px solid black;
+        border-right: 10px solid #9a8ac3;
     }
 
     #timeline .timeline-item .timeline-icon {
         left: 0;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #timeline .timeline-item .timeline-content:before,
+    #timeline .timeline-item .timeline-content.right:before {
+        left: -10px;
+        border-left: none;
+        border-right: none;
     }
 }
