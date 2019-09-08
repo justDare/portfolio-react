@@ -16,6 +16,7 @@
     background: -webkit-linear-gradient(45deg, #000000d9 50%, white 500%);
     background: linear-gradient(45deg, #000000d9 50%, black 500%);
     cursor: pointer;
+    border: 1px solid #cccccc;
 
     .bg {
       height: 100%;
@@ -23,7 +24,7 @@
     }
 
     p {
-      color: #FFF;
+      color: #fff;
       font-family: quicksand, Arial, sans-serif;
       font-weight: 400;
       line-height: 1.8em;
@@ -58,7 +59,7 @@
     &:hover .overlay,
     &:focus .overlay {
       background: -webkit-linear-gradient(45deg, #9a8ac3ad 50%, black 500%);
-      background: linear-gradient(45deg, #9a8ac3ad 50%, black 500%)
+      background: linear-gradient(45deg, #9a8ac3ad 50%, black 500%);
     }
 
     .overlay {
@@ -87,10 +88,10 @@
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
   }
 
   .impact .bg {
@@ -98,10 +99,10 @@
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
   }
 
   .gov .bg {
@@ -109,13 +110,12 @@
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -o-transition: all .5s;
-    transition: all .5s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
   }
 }
-
 
 .hovereffect img {
   display: block;
@@ -135,7 +135,7 @@
   bottom: 20px;
   left: 20px;
   border: 1px solid #fff;
-  content: '';
+  content: "";
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
@@ -151,7 +151,7 @@
 .hovereffect a,
 .hovereffect h4,
 .hovereffect p {
-  color: #FFF;
+  color: #fff;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
@@ -183,10 +183,17 @@
   padding-bottom: 1rem;
 }
 
-#portfolio .project {
-  height: 350px;
-  width: 100%;
-  padding-bottom: 30px;
+#portfolio {
+  .project {
+    height: 350px;
+    width: 100%;
+    padding-bottom: 30px;
+
+    @media only screen and (max-width: 768px) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
 }
 
 .project-image {
