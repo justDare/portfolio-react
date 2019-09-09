@@ -77,7 +77,7 @@ class About extends React.Component {
                   <br />
                   Doing my best,
                   <br />
-                  Dare
+                  Darian
                 </span>
               </div>
             </div>
