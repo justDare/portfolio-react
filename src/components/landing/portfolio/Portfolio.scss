@@ -94,6 +94,17 @@
     transition: all 0.5s;
   }
 
+  .search-algo-visualizer .bg {
+    background-image: url(../../../assets/landing/portfolio/search-algo-visualizer.png);
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
   .impact .bg {
     background-image: url(../../../assets/landing/portfolio/impact_report.png);
     background-position: top;

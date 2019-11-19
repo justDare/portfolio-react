@@ -24,6 +24,14 @@ class Portfolio extends React.Component {
         class: "daretoprogram"
       },
       {
+        name: "Saerch Algorithm Visualizer",
+        url: "https://justdare.github.io/Search-Algorithm-Visualizer/",
+        summary:
+          "A visualization tool for common search algorithms bulit in ReactJS.",
+        category: "React",
+        class: "search-algo-visualizer"
+      },
+      {
         name: "Animikii Social Impact Report",
         url: "http://2018.animikii.com/",
         summary:
