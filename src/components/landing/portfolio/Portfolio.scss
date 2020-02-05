@@ -83,6 +83,16 @@
     }
   }
 
+  .tech-job-me .bg {
+    background-image: url(../../../assets/landing/portfolio/tech-job-me.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
   .daretoprogram .bg {
     background-image: url(../../../assets/landing/portfolio/daretoprogram.png);
     background-position: top;
@@ -146,7 +156,7 @@
   bottom: 20px;
   left: 20px;
   border: 1px solid #fff;
-  content: "";
+  content: '';
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.45s;
