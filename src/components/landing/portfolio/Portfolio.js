@@ -18,7 +18,7 @@ class Portfolio extends React.Component {
       {
         name: 'TechJobMe',
         url: 'https://damp-thicket-76216.herokuapp.com/',
-        summary: 'A job appplication tracking tool built with the MERN stack.',
+        summary: 'A job application tracking tool built with the MERN stack.',
         category: 'JavaScript',
         class: 'tech-job-me'
       },
